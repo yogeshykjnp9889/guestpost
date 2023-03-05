@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import CommentPost from './CommectPost';
 import axios from 'axios';
 import '../css/postdetail.css';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 const PostDetail = (props) => {
     const [postDetails, setpostDetail] = useState('');
     const [recentPost, setrecentPost] = useState('');
@@ -32,6 +34,7 @@ const PostDetail = (props) => {
 
     return (
         <>
+            <Navbar title="Logo Here"/>
             <div className='text-center hero-section-postdetail'>
                 <div className='bg-post-detail cm-page-center'>
                     <h1>{postDetails.name}</h1>
@@ -73,6 +76,7 @@ const PostDetail = (props) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 

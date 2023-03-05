@@ -351,13 +351,16 @@ footer .footer-copywite{
 }
 
 .form-group input[type='text'],
+.form-group input[type='email'],
 .form-group input[type='password']
 {
   padding: 10px 10px;
+  border-radius: 5px;
+  border:1px solid gray;
 }
 
 .form-group{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 /* cursor */
@@ -391,6 +394,15 @@ footer .footer-copywite{
     text-decoration: none;
     padding: 5px 10px;
     display: block;
+}
+/* Alert Alert */
+
+.alert.alert-danger {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 

@@ -4,6 +4,8 @@ import axios from 'axios';
 import { FaUserAlt, FaCalendarAlt, FaRegComment } from "react-icons/fa";
 import { format, parseISO } from 'date-fns'
 import { Pagination } from '../component/Pagination';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 // import queryString from 'query-string';
 
 const CatePage = (props) => {
@@ -32,6 +34,7 @@ const CatePage = (props) => {
 
     return (
         <>
+        <Navbar title='Logo Here'/>
         <div className='cm-page-center'>
             <h1>{params.cateSlug.toUpperCase()}</h1>
             <div className='ptb-70'>
@@ -65,6 +68,7 @@ const CatePage = (props) => {
             </div>
             </div>
         </div>
+        <Footer />
         </>
     );
 }

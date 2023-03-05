@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import PostDetail from './pages/PostDetail';
 import CatePage from "./pages/CatePage";
+import Myaccount from './pages/Myaccount';
 
 
 function App() {
@@ -16,16 +17,15 @@ function App() {
   return (
     <>
     <Router>
-      <Navbar titleText = "Logog HERE" />
       <Routes>
           <Route exact  path='/'  element={<Home />} />
           <Route exact  path='/about'  element={<About />} />
           <Route exact  path='/post/:postDetail'  element={<PostDetail />} />
           <Route exact  path='/category/:cateSlug'  element={<CatePage/>} />
           <Route exact  path='/contact-us'  element={<Contact />} />
+          <Route exact  path='/myaccount'  element={<Myaccount />} />
       </Routes>
     </Router>
-    <Footer />
     </>
   );
 }

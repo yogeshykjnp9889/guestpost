@@ -5,6 +5,8 @@ import { format, parseISO } from 'date-fns'
 import Footergallery from '../component/Footergallery';
 import HomeSlider from '../component/HomeSlider';
 import { FaUserAlt, FaCalendarAlt, FaRegComment } from "react-icons/fa";
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 
 
 const   Home = () => {
@@ -21,6 +23,7 @@ const   Home = () => {
     
     return (
         <>
+        <Navbar title="Logo Here" />
         <HomeSlider />  
             <section className="cm-section cm-bor-bottom">
                 <div className="cm-page-center">
@@ -192,6 +195,7 @@ const   Home = () => {
                 </div>
             </div>
             </section>
+            <Footer />
         </>
 
     );

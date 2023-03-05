@@ -1,8 +1,12 @@
 import React from 'react';
+import Footergallery from '../component/Footergallery';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 
  const  About = () => {
     return (
         <>
+        <Navbar titleText = "Logog HERE" />
         <div className='cm-position-relative'>
             <img src='images/photo-galleery1-bg.jpg' alt='' />
             <div className='cm-position-absolute hero-section-inner'>
@@ -34,6 +38,7 @@ import React from 'react';
                 </div>
             </div>
         </section>
+        <Footer />
         </>
     );
 }
