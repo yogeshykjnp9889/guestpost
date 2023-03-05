@@ -1,15 +1,17 @@
 .sidebar.cm-wd-20 {
-    height: 100%;
     box-shadow: 0px 0px 5px gray;
+    height: 100vh;
+    overflow: auto;
     /* padding: 0px 30px; */
 }
 
-.sidebar-nav {
-    max-height: 900px;
-    height: 700px;
+.sidebar{
+    width: 250px;
 }
+
+
 .dashboard{
-    align-items: flex-start;
+    align-items: unset;
     
 }
 

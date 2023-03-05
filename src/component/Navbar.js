@@ -24,6 +24,7 @@ const Modal = (props) => {
   const [Popupcontion, setpopupContion] = useState('login');
 
   const clickHandlerPopup = (val) => {
+    setErrorflash();
     setpopupContion(val);
   }
 
@@ -46,16 +47,23 @@ if(Popupcontion==='login' && props.popup===true){
     console.log("input", inputlogin);
     let url = 'http://127.0.0.1:8000/api/user-login';
     axios.post(url,inputlogin).then((response) =>{
-      setloginInput({
-        'email':'',
-        'password':''
-      });
-      localStorage.setItem('userinfo', JSON.stringify(response.data.data));
-      console.log("Login Data::", response.data);
-      props.onChange(false);
+      if(response.data.status==='1'){
+        setloginInput({
+          'email':'',
+          'password':''
+        });
+        localStorage.setItem('userinfo', JSON.stringify(response.data.data));
+        console.log("Login Data::", response.data);
+        props.onChange(false);
+      }else{
+        console.log("Error Data::", response.data);
+        setErrorflash(response.data);
+       
+      }
     });
-
+    
   }
+  var Error = (errorFlash && errorFlash.message) ? <div className='alert alert-danger'>{errorFlash.message}</div> : '';
 return (
     <div className="modal">
       <div className="modal-content">
@@ -63,6 +71,7 @@ return (
       <div className="modal-head"></div>
       <div className="modal-body">
         <h1>Login Form</h1>
+        {Error}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
               {/* <input type="email" name="email"  value={email} onChange={(e) => setEmail(e.target.value)} className="form-control"  placeholder="Enter username"/> */}

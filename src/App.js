@@ -14,6 +14,7 @@ import Dashboard from './pages/Dashboard';
 import AddPost from './pages/Add-post';
 import Profile from './pages/Profile';
 import ListPost from './pages/List-post';
+import Logout from './component/Logout';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route exact  path='/add-post'  element={<AddPost />} />
           <Route exact  path='/list-post'  element={<ListPost />} />
           <Route exact  path='/profile'  element={<Profile />} />
+          <Route exact  path='/logout'  element={<Logout />} />
       </Routes>
     </Router>
     </>
