@@ -200,7 +200,7 @@ a.category-btn {
 
 /* Width Style */
 .cm-wd-20{
-  width: 25%;
+  width: 20%;
 }
 .cm-wd-25{
   width: 25%;
@@ -222,6 +222,10 @@ a.category-btn {
 }
 .cm-wd-75{
   width: 75%;
+}
+
+.cm-wd-80{
+  width: 80%;
 }
 
 /* padding */

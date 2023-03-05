@@ -10,6 +10,10 @@ import Contact from './pages/Contact';
 import PostDetail from './pages/PostDetail';
 import CatePage from "./pages/CatePage";
 import Myaccount from './pages/Myaccount';
+import Dashboard from './pages/Dashboard';
+import AddPost from './pages/Add-post';
+import Profile from './pages/Profile';
+import ListPost from './pages/List-post';
 
 
 function App() {
@@ -24,6 +28,10 @@ function App() {
           <Route exact  path='/category/:cateSlug'  element={<CatePage/>} />
           <Route exact  path='/contact-us'  element={<Contact />} />
           <Route exact  path='/myaccount'  element={<Myaccount />} />
+          <Route exact  path='/dashboard'  element={<Dashboard />} />
+          <Route exact  path='/add-post'  element={<AddPost />} />
+          <Route exact  path='/list-post'  element={<ListPost />} />
+          <Route exact  path='/profile'  element={<Profile />} />
       </Routes>
     </Router>
     </>

@@ -243,10 +243,9 @@ const Navbar = (props) => {
   if(checkAuthlogin()){
    let user =  checkAuthlogin();
    console.log("All User", user);
-    LoginPopup = <Link className="cm-prime-btn" to="myaccount"> My Account 👋 {user.fname} </Link>
+    LoginPopup = <Link className="cm-prime-btn" to="/dashboard"> My Account 👋 {user.fname} </Link>
   }else{
     LoginPopup = <Link className="cm-prime-btn" onClick={() => handleChange(true)}> Login </Link>
-
   }
 
 
